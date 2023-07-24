@@ -1,0 +1,124 @@
+@import './mixins';
+@import './media';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid $Light-gray;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: $Light-grayish-blue;
+    display: flex;
+    align-items: center;
+}
+
+.grid-container {
+    width: min(90%, 1400px);
+    margin-inline: auto;
+    margin-block: 2rem;
+    display: grid;
+    gap: 1.5rem;
+
+    @include mediaq (tablet) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mediaq (laptop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    border-radius: .4rem;
+    padding: 1.3rem;
+
+    figcaption {
+        display: flex;
+        gap: 1.4rem;
+        align-items: center;
+        margin-bottom: 1.4rem;
+
+        figure {
+            p.titulus {
+                filter: opacity(.5);
+                font-weight: light;
+            }
+        }
+    }
+
+    &-heading {
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+
+    &-paragraph {
+        filter: opacity(.7)
+    }
+}
+
+.card-1 {
+    @include set-background($Moderate-violet);
+    
+    @include mediaq (tablet) {
+        grid-column: span 2
+    }
+    
+    @include mediaq (laptop) {
+        grid-column: span 2
+    }
+}
+
+.card-2 {
+    @include set-background($Very-dark-grayish-blue);
+}
+
+.card-3 {
+    @include set-background($White);
+
+    @include mediaq (tablet) {
+        grid-column: span 2;
+    }
+
+    @include mediaq (laptop) {
+        grid-column: span 1;
+        grid-row-start: 2
+    }
+
+}
+
+.card-4 {
+    @include set-background($Very-dark-blackish-blue);
+
+    @include mediaq (tablet) {
+        grid-row-start: 3;
+        grid-column: span 2;
+    }
+    @include mediaq (laptop) {
+        grid-row-start: 2;
+        grid-column: span 2
+    }
+}
+
+.card-5 {
+    @include set-background($White);
+
+    @include mediaq (tablet) {
+        grid-row: 2 /4;
+    }
+    @include mediaq (laptop) {
+        grid-row: 1 /3;
+        grid-column: 4 / 5;
+    }
+
+}
