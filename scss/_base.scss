@@ -12,13 +12,13 @@ img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 3px solid $Light-gray;
+    border: 3px solid $light-gray;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
-    background: $Light-grayish-blue;
+    background: $light-grayish-blue;
     display: flex;
     align-items: center;
     font-size: 1rem;
@@ -48,13 +48,13 @@ body {
     border-radius: .4rem;
     padding: 1.3rem;
 
-    figcaption {
+    figure {
         display: flex;
         gap: 1.4rem;
         align-items: center;
         margin-bottom: 1.4rem;
 
-        figure {
+        figcaption {
             p.titulus {
                 filter: opacity(.5);
                 font-weight: light;
@@ -62,18 +62,21 @@ body {
         }
     }
 
-    &-heading {
-        margin-bottom: 1rem;
-        line-height: 1.4;
+    &-text {
+
+        h2 {
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        p{
+            filter: opacity(.7)
+        }
     }
 
-    &-paragraph {
-        filter: opacity(.7)
-    }
 }
 
 .card-1 {
-    @include set-background($Moderate-violet);
+    @include set-background($moderate-violet);
     
     @include mediaq (tablet) {
         grid-column: span 2
@@ -85,11 +88,11 @@ body {
 }
 
 .card-2 {
-    @include set-background($Very-dark-grayish-blue);
+    @include set-background($very-dark-grayish-blue);
 }
 
 .card-3 {
-    @include set-background($White);
+    @include set-background($w);
 
     @include mediaq (tablet) {
         grid-column: span 2;
@@ -103,7 +106,7 @@ body {
 }
 
 .card-4 {
-    @include set-background($Very-dark-blackish-blue);
+    @include set-background($very-dark-blackish-blue);
 
     @include mediaq (tablet) {
         grid-row-start: 3;
