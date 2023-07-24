@@ -19,6 +19,12 @@ body {
   background: hsl(210, 46%, 95%);
   display: flex;
   align-items: center;
+  font-size: 1rem;
+}
+@media (min-width: 976px) {
+  body {
+    font-size: 1.2rem;
+  }
 }
 
 .grid-container {
