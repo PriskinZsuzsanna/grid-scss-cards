@@ -7,19 +7,19 @@
     };
 
     @if $breakpoint == tablet {
-        @media (min-width: 888px){
+        @media (min-width: 768px){
             @content
         }
     };
 
     @if $breakpoint == laptop {
-        @media (min-width: 1176px){
+        @media (min-width: 976px){
             @content
         }
     };
 
     @if $breakpoint == monitor {
-        @media (min-width: 1670px){
+        @media (min-width: 1370px){
             @content
         }
     };
